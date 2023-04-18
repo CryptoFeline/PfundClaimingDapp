@@ -38,7 +38,7 @@ let provider = new ethers.providers.Web3Provider(window.ethereum)
 
 // Address of the smart contract in ETH Chain
 //const contractAddress = '0x5864c6A9cFdEBc8652DC576e4087c100B1F96E40' // address given while deploying the smart contract       
-const contractAddress = '0xfBC6bE3A4aDd5f47F2d95B73A9dF8ff7D7f0eF2d' // address given while deploying the smart contract               
+const contractAddress = '0xf1460554E3f9e913D20b54a44604F79434681d91' // address given while deploying the smart contract               
 
 
 /* Function for DEPOSIT */
