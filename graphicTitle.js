@@ -1,4 +1,4 @@
-title = " Lock and Set Ownner dApp ";
+title = "Pepe's Claim dApp";
 position = 0;
 function scrolltitle() {
     document.title = title.substring(position, title.length) + title.substring(0, position); 
