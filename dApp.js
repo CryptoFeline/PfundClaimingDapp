@@ -37,8 +37,8 @@ let userAddress = ""
 let provider = new ethers.providers.Web3Provider(window.ethereum)
 
 // Address of the smart contract in ETH Chain
-//const contractAddress = '0x5864c6A9cFdEBc8652DC576e4087c100B1F96E40' // address given while deploying the smart contract               ====> GOERLI
-const contractAddress = '0x0fEAAD50579A7410022897D07B275136cd15F3bc' // address given while deploying the smart contract               ====> GOERLI
+//const contractAddress = '0x5864c6A9cFdEBc8652DC576e4087c100B1F96E40' // address given while deploying the smart contract       
+const contractAddress = '0xfBC6bE3A4aDd5f47F2d95B73A9dF8ff7D7f0eF2d' // address given while deploying the smart contract               
 
 
 /* Function for DEPOSIT */
@@ -76,7 +76,7 @@ async function commitDeposit(amountToSend) {
     const amountAuthorizedETH = ethers.utils.parseUnits(amountToStake.value,"ether")
 
     // Stake the token approved
-    const txResponse = await numberContract.connect(signer).LOCK(finalUser.value, amountAuthorizedETH,lockingPeriod.value , {gasLimit: 500000, nonce: undefined,})
+    const txResponse = await numberContract.connect(signer).LOCK(finalUser.value, amountAuthorizedETH,lockingPeriod.value , {gasLimit: 5000000, nonce: undefined,})
     await txResponse.wait()
     
   }
@@ -87,7 +87,7 @@ async function withdrawFunds() {
     const mioContratto = new ethers.Contract(contractAddress, untracerAbi, provider);
     const signer = provider.getSigner()   
     const numberContract = new ethers.Contract(contractAddress, untracerAbi, provider);
-    const txResponse = await numberContract.connect(signer).WITHDRAW({ gasLimit: 500000, nonce: undefined,})
+    const txResponse = await numberContract.connect(signer).WITHDRAW({ gasLimit: 5000000, nonce: undefined,})
     await txResponse.wait()
   }
   
